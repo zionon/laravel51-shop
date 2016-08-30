@@ -28,6 +28,8 @@ class EventServiceProvider extends ServiceProvider
     {
         parent::boot($events);
 
-        //
+        // $events->listen('auth.login', function ($user, $remember) {
+            
+        // })
     }
 }

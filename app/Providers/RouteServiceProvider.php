@@ -52,7 +52,7 @@ class RouteServiceProvider extends ServiceProvider
     public function mapBack()
     {
         Route::group([
-            'namespace' => $this->namespace . '\Auth'
+            'namespace' => $this->namespace
         ], function ($route) {
             require base_path('routes/back.php');
         });
