@@ -41,6 +41,11 @@ class AddSuperAdmin extends Command
         $admin = new Admin();
         $admin->name = 'admin';
         $admin->email = 'admin@admin.com';
-        $admin->password = 'password';
+        $admin->password = bcrypt('password');
+        if ($admin->save()) {
+            $this->info("Create SuperAdministartor Success");
+        } else {
+            $this->error("Create SuperAdministartor False");
+        }
     }
 }
