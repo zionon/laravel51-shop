@@ -7,7 +7,5 @@ Route::group(['namespace' => 'Auth'], function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
-	Route::get('admin', function () {
-		echo "this is admin";
-	});
+	Route::get('admin', 'BackController@index');
 });
