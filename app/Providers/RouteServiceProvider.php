@@ -41,4 +41,18 @@ class RouteServiceProvider extends ServiceProvider
             require app_path('Http/routes.php');
         });
     }
+
+    public function mapFront()
+    {
+        Route::group(['namespace' => $this->namespace], function ($route) {
+            require base_path('routes/front.php');
+        })
+    }
+
+    public function mapBack()
+    {
+        Route::group(['namespace' => $this->namespace] function ($route) {
+            require app_path('routes/back.php');
+        })
+    }
 }
