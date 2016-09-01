@@ -150,6 +150,8 @@ return [
          */
         Zizaco\Entrust\EntrustServiceProvider::class,
 
+        Kbwebs\MultiAuth\AuthServiceProvider::class,
+
     ],
 
     /*
