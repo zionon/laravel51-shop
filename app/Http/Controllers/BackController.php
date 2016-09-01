@@ -13,7 +13,8 @@ class BackController extends Controller
 {
     public function index()
     {
-        $user = Auth::user();
-        dd($user);
+        // $user = Auth::user();
+        // dd($user);
+        dd($_SERVER["REMOTE_ADDR"]);
     }
 }
